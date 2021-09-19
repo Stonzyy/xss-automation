@@ -6,4 +6,4 @@ while getopts "u:" arg; do
   esac
 done
 
-subfinder -d $site > subs.txt; cat subs.txt | httpx --silent > valid.txt; cat valid.txt | waybackurls > way.txt; cat way.txt | kxss
+subfinder -d $site > subs.txt; cat subs.txt | httpx --silent > valid.txt; cat valid.txt | waybackurls > way.txt; cat way.txt | grep = > params.txt; cat params.txt | kxss
